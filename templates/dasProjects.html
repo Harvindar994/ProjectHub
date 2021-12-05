@@ -1,0 +1,26 @@
+{% extends 'Dashboard.html' %}
+
+{% block content %}
+
+    <div class="content">
+		<div class="projects">
+
+			{% for project in projects %}
+			<!-- Project -->
+			<div class="Project">
+				<div class="card" style="width: 18rem;">
+				  <img class="card-img-top" src="{{project.image.url}}" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">{{project.name}}</h5>
+				    <p>by {{project.developerName}}</p>	
+				    <p class="card-text">{{project.description}}</p>
+				    <a href="{% url 'DasViewProject' project.id  %}" class="btn btn-primary">View</a>
+				  </div>
+				</div>
+			</div>
+			{% endfor %}
+
+		</div>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+    <div class="das-view-projet-containner">
+    	<div class="das-view-inner-containner">
+	    	<div class="author-info">
+	    		<h2>{{project.name}}</h2>
+	    		<h5>Developed By {{project.developerName}}</h5>
+	    	</div>
+	    	<img src="{{project.image.url}}" style="width: 100%;">
+	    	<div class="description">
+	    		<h5>Description</h5>
+	    		<p>{{project.description}}</p>
+	    	</div>
+	    	
+	    	<div class="code-section">
+	    		<h5>Code</h5>
+	    		<div class="copybutton">
+		    		<div class="popup" onclick="showmessage()">
+		    		  <button onclick="copyTextToClipboard()">Copy</button>
+					  <span class="popuptext" id="popMessage">Copied</span>
+					</div>
+	    		</div>
+	    		<pre id="projectCode">{{project.code}}</pre>
+	    	</div>
+	    	{% if project.email == user.email %}
+		    	<div class="viewProjectButtons">
+		    		<a href="{% url 'EditProject' project.id  %}"><button type="button" class="btn btn-success">Edit</button></a>
+					<a href="{% url 'DeleteProject' project.id  %}"><button type="button" class="btn btn-danger">Delete</button></a>
+		    	</div>
+		    {% endif %}
+    	</div>
+    </div>
+    <script>
+    	function copyTextToClipboard() {
+    	  
+    	  var text = document.getElementById("projectCode").innerHTML;
+		  if (!navigator.clipboard) {
+		    fallbackCopyTextToClipboard(text);
+		    return;
+		  }
+		  navigator.clipboard.writeText(text).then(function() {
+		    console.log('Async: Copying to clipboard was successful!');
+		  }, function(err) {
+		    console.error('Async: Could not copy text: ', err);
+		  });
+		}
+
+		// When the user clicks on div, open the popup
+		function showmessage() {
+		  var popup = document.getElementById("popMessage");
+		  popup.classList.toggle("show");
+		  $('document').ready(function(){
+			  window.setTimeout('hidemessage()', 1000);});
+		  }
+		function hidemessage(){
+			var popup = document.getElementById("popMessage");
+		  	popup.classList.toggle("hide");
+		}
+	</script>
+
+{% endblock %}

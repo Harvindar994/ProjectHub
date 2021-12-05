@@ -1,0 +1,316 @@
+.content{
+	width: 100%;
+	min-height: 537px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.projects{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 20px 10px 10px 10px;
+}
+
+.Project{
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+footer{
+	margin: 0px;
+}
+
+footer p{
+	margin: 0px;
+}
+
+.bottom-section{
+	width: 100%;
+	background-color: #007bff;
+}
+
+.bottom-section p{
+	text-align: center;
+	padding: 10px;
+	color: white;
+}
+
+.form-containner{
+	text-align: center;
+	padding: 50px;
+	color: royalblue;
+	min-height: 550px;	 
+	background-color: #ccc;
+}
+
+.form-containner form{
+	text-align: left;
+	color: black;
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+.form-containner form button{
+	float: right;
+	margin-left: 30px;
+}
+
+.form-containner a{
+	text-align: right;
+	text-decoration: none;
+}
+
+.message{
+	margin-top: 15px;
+	margin-bottom: 0px;
+	text-align: center;
+	color: white;
+	padding: 3px 20px 3px 20px;
+	border-radius: 5px;
+	display: inline-block;
+	background-color: #dc35457d;
+}
+
+.singup-form form{
+	max-width: 800px;
+}
+
+/* dashboard styles */
+
+.dashboard{
+	min-height: 541px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.das-profile{
+	color: white;
+    background-color: #6c757d;
+    padding: 20px;
+    border-bottom: 2px solid #ffffff;
+}
+
+.das-menu{
+	text-align: center;
+	width: 25%;
+	background: #e9ecef;
+}
+
+.das-menu-options{
+	padding: 20px 0px 20px 0px;
+}
+
+.das-menu ul{
+	list-style: none;
+	margin: 0px;
+	padding: 0px
+}
+
+.das-menu ul a{
+	text-decoration: none;
+}
+
+.das-menu ul li{
+	cursor: pointer;
+	padding: 20px 0px 20px 0px;
+}
+
+.das-menu ul li:hover {
+	border-left: 4px solid royalblue;
+    background: #dae0e5;
+}
+
+.das-content{
+	width: 75%;
+	overflow-y: scroll;
+    height: 541px;
+}
+
+/* Dasboard Edit Profile */
+
+.editProfile form{
+	max-width: 800px;
+}
+
+.editProfile form button{
+	margin-top: 20px;
+}
+
+/* Not data Styles */
+
+.no-data{
+	background-color: #CCCCCC;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-data-child{
+	opacity: 0.2;
+    width: 28%;
+    text-align: center;
+    font-size: 22px;
+    color: #1d2124;
+    border: 3px solid #545b62;
+    border-radius: 7px;
+}
+
+.no-data-child h4{
+	padding: 20px;
+}
+
+/* Dasboard View Project Containner and Other Styles */
+.das-view-projet-containner{
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}
+
+.das-view-inner-containner{
+	padding: 20px;
+	padding-left: 30px;
+}
+
+.das-view-inner-containner img{
+	margin-bottom: 23px;
+    margin-top: 15px;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 3px 4px 17px -5px #1d2124;
+}
+
+.das-view-projet-containner .author-info h2{
+	color: #0062cc;
+}
+
+.das-view-projet-containner .author-info h5{
+	color: #545b62;
+}
+
+.das-view-projet-containner .code-section pre{
+	background: #303030;
+	width: 100%;
+    color: #f1f1f1;
+    padding: 20px 16px;
+    border-radius: 5px;
+    border-top: 4px solid #007bff;
+    -moz-box-shadow: inset 0 0 10px #000;
+    box-shadow: inset 0 0 10px #000;
+}
+
+.das-view-projet-containner .code-section button{
+    background-color: #03af2a;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    border: 2px solid #28a745;
+    padding: 2px 15px;
+}
+
+.copybutton{
+	float: right;
+    padding: 20px;
+    margin-bottom: -70px;
+    margin-top: 0px;
+}
+
+.das-view-projet-containner .code-section button:hover{
+	background: #1dc143;
+}
+
+.das-view-projet-containner .description{
+	margin-top: 19px;
+    margin-bottom: 45px;
+}
+
+.das-view-projet-containner h5{
+	margin-bottom: 13px;
+}
+
+.viewProjectButtons{
+	float: right;
+    padding: 12px 0px 20px 0px;
+}
+
+.viewProjectButtons button{
+	margin-right: 10px;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+
+.popup .popuptext {
+  visibility: hidden;
+  font-size: 14px;
+  background-color: #03af2a;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 15px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.popup .hide {
+  visibility: hidden;
+  -webkit-animation: fadeOut 1s;
+  animation: fadeOut 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+/* Add animation (fade out the popup) */
+@-webkit-keyframes fadeOut {
+  from {opacity: 1;} 
+  to {opacity: 0;}
+}
+
+@keyframes fadeOut {
+  from {opacity: 1;}
+  to {opacity:0 ;}
+}
+
+
+/* Edit Project */
+
+.ProjectDescription{
+	min-height: 210px;
+}
+
+.ProjectCode{
+	min-height: 450px;
+}
